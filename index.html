@@ -15,19 +15,22 @@
         <form id="pedidoForm">
 
             <label>Nombre:</label>
-            <input type="text" name="nombre" required>
+            <input type="text" id="cliente" required>
 
             <label>Producto:</label>
-            <select name="producto" required>
-                <option value="Camiseta">Camiseta</option>
-                <option value="Zapatos">Zapatos</option>
-                <option value="Pantalón">Pantalón</option>
+            <select id="producto" required>
+                <option value="Camiseta" data-precio="40000">Camiseta</option>
+                <option value="Zapatos" data-precio="120000">Zapatos</option>
+                <option value="Pantalón" data-precio="60000">Pantalón</option>
             </select>
 
             <label>Cantidad:</label>
-            <input type="number" name="cantidad" min="1" required>
+            <input type="number" id="cantidad" min="1" required>
 
-            <button type="submit">Enviar pedido</button>
+            <label>Precio:</label>
+            <input type="number" id="precio" readonly>
+
+            <button type="button" id="btnEnviar">Enviar pedido</button>
         </form>
 
         <p id="estado" class="estado"></p>
